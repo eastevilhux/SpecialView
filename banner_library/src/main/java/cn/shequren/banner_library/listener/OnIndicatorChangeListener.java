@@ -1,8 +1,9 @@
 package cn.shequren.banner_library.listener;
 
 
-import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 

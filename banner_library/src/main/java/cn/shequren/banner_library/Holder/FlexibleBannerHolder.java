@@ -6,8 +6,9 @@ package cn.shequren.banner_library.Holder;
  * @param <T> 任何你指定的对象
  */
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class FlexibleBannerHolder extends RecyclerView.ViewHolder {
     public FlexibleBannerHolder(View itemView) {

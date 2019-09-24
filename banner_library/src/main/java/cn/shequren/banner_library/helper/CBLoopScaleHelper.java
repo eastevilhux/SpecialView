@@ -1,10 +1,11 @@
 package cn.shequren.banner_library.helper;
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.PagerSnapHelper;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 import cn.shequren.banner_library.Adapter.FlexilbeBasePageAdapter;
 import cn.shequren.banner_library.listener.OnPageChangeListener;

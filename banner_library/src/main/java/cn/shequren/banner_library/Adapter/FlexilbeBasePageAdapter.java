@@ -1,14 +1,15 @@
 package cn.shequren.banner_library.Adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 import cn.shequren.banner_library.Holder.FlexibleBannerHolder;
 import cn.shequren.banner_library.Holder.ItmeBuildImpi;
 import cn.shequren.banner_library.listener.BannerItemListener;
-
-import java.util.List;
 
 
 public class FlexilbeBasePageAdapter<T> extends RecyclerView.Adapter<FlexibleBannerHolder> {
