@@ -17,15 +17,10 @@ import cn.shequren.banner_library.Holder.FlexibleBannerHolder;
  */
 public class TestLocalImageHolderView extends FlexibleBannerHolder {
 
-    private String id;
 
     public TestLocalImageHolderView(View itemView) {
         super(itemView);
 
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     @Override

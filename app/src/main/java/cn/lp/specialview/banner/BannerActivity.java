@@ -61,14 +61,13 @@ public class BannerActivity extends AppCompatActivity {
 
             @Override
             public FlexibleBannerHolder createViewHolder(ViewGroup parent, int viewType) {
-
+                //返回布局类型1
                 if (viewType == 1) {
                     View itemView = LayoutInflater.from(getBaseContext()).inflate(R.layout.banner_item, parent, false);
-
                     return new TestLocalImageHolderView1(itemView);
                 } else {
+                    //返回布局样式2
                     View itemView = LayoutInflater.from(getBaseContext()).inflate(R.layout.banner2_item, parent, false);
-
                     return new TestLocalImageHolderView2(itemView);
                 }
 
@@ -76,6 +75,7 @@ public class BannerActivity extends AppCompatActivity {
 
             @Override
             public int getItemViewType(Object t) {
+                //根据数据返回布局样式类型
                 Banner banner = (Banner) t;
                 return banner.getType();
             }

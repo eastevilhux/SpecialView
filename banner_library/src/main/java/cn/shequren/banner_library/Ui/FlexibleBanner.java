@@ -97,7 +97,7 @@ public class FlexibleBanner<T, L extends BannerLoopTaskImpl> extends RelativeLay
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.FlexibleBanner);
         isAutoSwitch = a.getBoolean(R.styleable.FlexibleBanner_auto_switch, true);
         isAloneAutoSwitch = a.getBoolean(R.styleable.FlexibleBanner_alone_auto_switch, false);
-        proportion = a.getFloat(R.styleable.FlexibleBanner_aspect_ratio, 1);
+        proportion = a.getFloat(R.styleable.FlexibleBanner_aspect_ratio, -1);
         autoSwitchTime = a.getInteger(R.styleable.FlexibleBanner_distance_time, 5000);
         slideVelocity = a.getFloat(R.styleable.FlexibleBanner_slide_velocity, 30f);
         a.recycle();
@@ -470,9 +470,14 @@ public class FlexibleBanner<T, L extends BannerLoopTaskImpl> extends RelativeLay
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
-        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
-        super.onMeasure(MeasureSpec.makeMeasureSpec(widthSize, widthMode), MeasureSpec.makeMeasureSpec((int) (widthSize * proportion), widthMode));
+        if(proportion>0){
+            int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+            int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+            super.onMeasure(MeasureSpec.makeMeasureSpec(widthSize, widthMode), MeasureSpec.makeMeasureSpec((int) (widthSize * proportion), widthMode));
+
+        }else{
+            super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+        }
 
     }
 
