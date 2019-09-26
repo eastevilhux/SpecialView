@@ -161,3 +161,72 @@ xml配置：
  5. slide_velocity  一个像素滑动的时间 默认30f
  
  ## 2.BorderPWEditText使用
+
+### 添加依赖
+
+#### 3.布局Xml中使用：
+
+```
+  <cn.lp.input_library.BorderPWEditText
+        android:id="@+id/BorderPWEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:inputType="text"
+        app:borderRadius="5dp"
+        app:conceal="true"
+        app:employFillColor="#FF9800"
+        app:employLColor="#F44336"
+        app:employLineWidth="2dp"
+        app:focusFillColor="#009688"
+        app:focusLColor="#673AB7"
+        app:focusLineWidth="2dp"
+        app:height="40dp"
+        app:isContinuousChar="true"
+        app:lineWidth="2dp"
+        app:width="40dp"
+        />
+```
+根据前面的属性说明自行添加相应属性实现效果
+
+#### 4.监听输入
+
+```
+ BorderPWEditText.setmInputOverListener(object : BorderPWEditText.InputOverListener {
+            override fun InputOver(string: String?) {
+                Toast.makeText(baseContext, "当前接收的数据为：${string}", Toast.LENGTH_LONG).show()
+            }
+
+            override fun InputHint(string: String?) {
+                Toast.makeText(baseContext, string, Toast.LENGTH_LONG).show()
+            }
+
+        })
+```
+#### 可以选择的属性：
+| 属性名称 |作用  |
+|--|--|
+| textColor  | 文字颜色默认黑色 |
+| textSize | 文文字尺寸默认 22|
+| count | 输入框个数默认6|
+| width| 输入框宽度默认40dp|
+| height| 输入框高度默认40dp |
+| lineColor|  默认状态的边框颜色 默认黑色 |
+| fillColor  | 默认状态的填充颜色  默认白色|
+| lineWidth| 默认状态的边框宽度  默认1dp|
+| focusLColor|  默认状态的边框颜色 默认黑色 |
+| focusFillColor| 默认状态的填充颜色  默认白色|
+| focusLineWidth| 默认状态的边框宽度  默认1dp|
+| employLColor|  默认状态的边框颜色 默认黑色 |
+| employFillColor| 默认状态的填充颜色  默认白色|
+| employLineWidth| 默认状态的边框宽度  默认1dp|
+| isContinuous|  输入框是否连续（方便以后其他需要就添加了）默认true 连续|
+| borderRadius| 文输入框边角半径 默认0dp|
+| conceal | 是否隐藏文字 默认false 不隐藏 |
+| replaceString| 文字隐藏替换字符 默认没有 |
+| replaceDrawable| 文字隐藏替换图片（优先级高于replaceString）  默认没有 |
+| circleRadius| 默认替换图案半径（圆形） 默认为width的三分之一 |
+| circleColor| 默认替换图案颜色 默认与textColor  一致|
+| isContinuousRepeatChar| 是否过滤连续重复的字符  默认false 不过滤 |
+| isContinuousChar| 是否过滤连续的字符  默认false 不过滤 |
+| isInvokingKeyboard | 是否使用系统键盘  默认为true 如果为false的换需要自己手动调起键盘 |
