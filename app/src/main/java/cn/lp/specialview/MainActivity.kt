@@ -19,4 +19,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, BannerActivity::class.java))
 
     }
+
+    fun EditextActivity(view: View) {
+
+
+        startActivity(Intent(this, EditextLsitActivity::class.java))
+
+    }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="显示使用系统键盘" />
+
+    <cn.lp.input_library.BorderPWEditText
+        android:id="@+id/BorderPWEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:inputType="text"
+        app:borderRadius="5dp"
+        app:conceal="true"
+        app:employFillColor="#FF9800"
+        app:employLColor="#F44336"
+        app:employLineWidth="2dp"
+        app:focusFillColor="#009688"
+        app:focusLColor="#673AB7"
+        app:focusLineWidth="2dp"
+        app:height="40dp"
+        app:isContinuousChar="true"
+        app:lineWidth="2dp"
+        app:width="40dp"
+
+        />
+
+
+
+</LinearLayout>

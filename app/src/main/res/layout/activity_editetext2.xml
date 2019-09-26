@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <cn.lp.input_library.BorderPWEditText
+        android:id="@+id/PWEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:inputType="number"
+        app:height="40dp"
+        app:isInvokingKeyboard="false"
+        app:width="40dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1">
+
+        <cn.lp.input_library.NumberKeyboardView
+            android:id="@+id/passkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#dedede"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@android:color/white"
+            android:keyTextColor="#000000"
+            android:shadowColor="#00000000"
+            android:shadowRadius="0"
+            app:keyBgroundColor="#dedede"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+</LinearLayout>

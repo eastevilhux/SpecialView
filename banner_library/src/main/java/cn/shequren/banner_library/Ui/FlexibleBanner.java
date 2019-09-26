@@ -488,6 +488,8 @@ public class FlexibleBanner<T, L extends BannerLoopTaskImpl> extends RelativeLay
         stopTurning();
     }
 
+
+
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     public void onActivityPause() {
         //开始轮播

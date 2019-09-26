@@ -1,2 +1,2 @@
-include ':app', ':banner_library'
+include ':app', ':banner_library', ':input_library'
 rootProject.name='SpecialView'
