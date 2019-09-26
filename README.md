@@ -1,6 +1,10 @@
-# SpecialView是通用控件的一个集合库目前收录了，支持灵活布局的Banner ，后期将会陆续整理其他的功能分享出来
+# SpecialView是通用控件的一个集合库目前收录
+#### 支持灵活布局的Banner 
+#### 一个之自定义的带边框的输入控件BorderPWEditText以及一个简易的自定义布局键盘NumberKeyboardView
 
-## 持多种布局Banner组件
+#### 后期将会陆续整理其他的功能分享出来
+
+## 1.持多种布局Banner组件
 
 ### 使用
 
@@ -155,3 +159,5 @@ xml配置：
  3. distance_time 轮播时间间隔 默认5000
  4. aspect_ratio 宽高比 默认-1 不支持宽高比
  5. slide_velocity  一个像素滑动的时间 默认30f
+ 
+ ## 2.BorderPWEditText使用
